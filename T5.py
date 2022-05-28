@@ -58,6 +58,10 @@ def test():
     print("multi sentence test")
     Texts=["I love rock and roll",'especially the kind of stuff that rocks']
     encoded_text, attention_masks = get_encoded_text(Texts, model_name)
+    #print(encoded_text.size())
+    #print(attention_masks.size())
+
+
 
 
 test()
