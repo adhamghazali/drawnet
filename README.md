@@ -1,4 +1,5 @@
-![drawnet](https://github.com/adhamghazali/drawnet/blob/main/images/drawnet.png)
+<img src="https://github.com/adhamghazali/drawnet/blob/main/images/drawnet.png" align="center" />
+
 
 ## drawnet Imagen - Pytorch (under construction)
 
