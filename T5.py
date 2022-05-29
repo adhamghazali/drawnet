@@ -42,11 +42,15 @@ def get_encoded_text(texts, model_name='t5-small'):
     with torch.no_grad():
         if config[0] == 't5':
             output = t5(input_ids=input_ids, attention_mask=attn_mask)
-            encoded_text = output.last_hidden_state.detach()
+            encoded_text = output.last_hidden_state#.detach()
+            #output = self.t5(input_ids=tokens, attention_mask=mask)['last_hidden_state']
+
+
+
 
         elif config[0] == 'auto':
             output = t5(input_ids=input_ids, attention_mask=attn_mask, decoder_input_ids=input_ids[:, :1])
-            encoded_text = output.encoder_last_hidden_state.detach()
+            encoded_text = output.encoder_last_hidden_state#.detach()
 
     return encoded_text, attn_mask.bool()
 
