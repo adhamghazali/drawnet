@@ -1,4 +1,4 @@
-![drawnet](.\images\drawnet.png)
+![drawnet](https://github.com/adhamghazali/drawnet/blob/main/images/drawnet.png)
 
 ## drawnet Imagen - Pytorch (under construction)
 
