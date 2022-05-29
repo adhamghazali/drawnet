@@ -1,4 +1,4 @@
-<img src="https://github.com/adhamghazali/drawnet/blob/main/images/drawnet.png" align="center" />
+<img src="https://github.com/adhamghazali/drawnet/blob/main/images/drawnet.png" align="right" />
 
 
 ## drawnet Imagen - Pytorch (under construction)
