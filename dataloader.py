@@ -14,7 +14,7 @@ emb_dims = configs.embedding_dims
 np.random.seed(2022)
 class ImageDataset():
     def __init__(self,  image_dir, embeddings_dir,dataset_size, batch_size):
-        self.image_dir = image_dir
+        self.image_dir =
         self.embeddings_dir=embeddings_dir
         self.dataset_size=dataset_size
         self.batch_size=batch_size

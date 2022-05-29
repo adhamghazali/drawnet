@@ -39,6 +39,7 @@ csvfile = r'D:\laion400m\laion_data_' + str(thepart) + '.csv'
 
 with open(csvfile, 'w', encoding='UTF8', newline='') as f:
     writer = csv.writer(f)
+    writer.writerow(['imagepath','text'])
 
     for i in tqdm(range(0, 10)):  # to len(df)
         url = df["URL"][i]
