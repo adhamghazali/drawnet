@@ -60,7 +60,7 @@ class txt_to_img(UNetModel):
     def del_cache(self):
         self.cache = None
 
-    def forward(self, x, timesteps):
+    def forward(self, x, timesteps,encoded_text):
         hs = []
         emb = self.time_embed(timestep_embedding(timesteps, self.model_channels))
         if self.xf_width:
