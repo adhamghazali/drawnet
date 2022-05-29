@@ -1,2 +1,3 @@
 pip install sentencepiece
 pip install ipyplot
+pip install img2dataset
