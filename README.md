@@ -1,3 +1,5 @@
+![drawnet](.\images\drawnet.png)
+
 ## drawnet Imagen - Pytorch (under construction)
 
 Under construction Implementation of <a href="https://gweb-research-imagen.appspot.com/">Imagen</a>, Google's Text-to-Image Neural Network that beats DALL-E2, in Pytorch. It is the new SOTA for text-to-image synthesis.
