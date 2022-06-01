@@ -1,28 +1,30 @@
 from PIL import Image
-import blobfile as bf
-from mpi4py import MPI
+
 import numpy as np
-from torch.utils.data import DataLoader, Dataset
 import torch
 import json
 import os
-from transformers import AutoTokenizer
 import configs
+import pandas as pd
 
 emb_dims = configs.embedding_dims
 
 np.random.seed(2022)
-class ImageDataset():
-    def __init__(self,  image_dir, embeddings_dir,dataset_size, batch_size):
-        self.image_dir =
-        self.embeddings_dir=embeddings_dir
-        self.dataset_size=dataset_size
+class ImageDataset:
+    def __init__(self, batch_size):
+
+        self.image_dir =r'D:\laion400m\images'
+        self.embeddings_dir=r'D:\laion400m\embeddings'
+        self.csvfile=r'D:\laion400m\laion_data_0.csv'
+        self.df = pd.read_csv(self.csvfile)
+        self.dataset_size=len(self.df)
         self.batch_size=batch_size
-        sorted_index=np.array([i for i in range(0,dataset_size)])
+        sorted_index=np.array([i for i in range(0,self.dataset_size)])
         np.random.shuffle(sorted_index)
         self.unsorted_index=sorted_index
         assert (self.dataset_size% self.batch_size)==0,'dataset len is not devisiable by batch size'
-        self.batches=self.np.reshape(self.unsorted_index,(-1,self.dataset_size))
+        self.batches=np.reshape(self.unsorted_index,(-1,self.dataset_size))[0]
+        print(self.batches)
 
 
 
@@ -58,6 +60,11 @@ class ImageDataset():
 
         batch=self.batches[batch_number]
         return self.prepare_batch_on_mem(batch)
+
+
+
+X=ImageDataset(2)
+
 
 
 

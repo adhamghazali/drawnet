@@ -25,6 +25,11 @@ flowchart TD
 ```
 
 
+#### Sample Usage (API) - WIP
+```python
+import drawnet
+
+```
 
 TODO
 
