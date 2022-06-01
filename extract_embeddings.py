@@ -22,6 +22,11 @@ if __name__ == "__main__":
     for i in tqdm(range(len(df))):
         sentence = df['text'][i]
         fnx=embeddings_save_filename+str(i)
-        enocoded_text,_=encoder.get_encoded_text(sentence,save_to_file=True)
-        np.save(fnx, enocoded_text.cpu())
+        encoded_text,masks=encoder.get_encoded_text(sentence,save_to_file=True)
+        print("pre: ",encoded_text.shape)
+        encoded_text, masks = map(lambda t: t.to('cpu'), (encoded_text, masks))
+        print(encoded_text.shape)
+
+
+        np.save(fnx, encoded_text.cpu())
 
