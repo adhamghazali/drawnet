@@ -36,7 +36,7 @@ TODO
 - [x] T5-Encoder
 - [x] Laion 400m downloader
 - [x] Base Model (WIP)
-- [ ] Data loader (WIP)
+- [x] Data loader
 - [ ] Diffusion(DDIM) model
 - [ ] Model Build
 - [ ] Train Loop

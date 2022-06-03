@@ -68,6 +68,10 @@ class ImageDataset:
         arr = arr[crop_y: crop_y + self.resolution, crop_x: crop_x + self.resolution]
         arr = arr.astype(np.float32) / 127.5 - 1
         arr = self.totorch(arr)
+        h = arr.type(torch.dtype)
+        print(h)
+
+
 
         return arr
 
@@ -102,6 +106,7 @@ class ImageDataset:
 
 
 
-
+X=ImageDataset(2)
+X.get_batch(1)
 
 
