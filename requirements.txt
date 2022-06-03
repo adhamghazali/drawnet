@@ -1,3 +1,12 @@
-pip install sentencepiece
-pip install ipyplot
-pip install img2dataset
+sentencepiece
+ipyplot
+img2dataset
+numpy
+torch
+torchvision
+transformers
+tqdm
+pandas
+matplotlib
+
+
